@@ -1,0 +1,32 @@
+{
+  "name": "react-playground",
+  "version": "1.0.0",
+  "description": "React Playground",
+  "scripts": {
+    "serveit": "browser-sync start --files 'app/**/*.html,app/**/*.css,app/**/*.js' --server 'app'",
+    "autoInjectBundle": "jspm bundle --minify src/main app/dist/bundle-inject.js --inject",
+    "bundle": "jspm bundle-sfx --minify src/main app/dist/bundle-sfx.js",
+    "htmldist": "html-dist app/index.html --remove-all --minify --insert bundle-sfx.js -o app/dist/index.html",
+    "devMode": "jspm unbundle",
+    "dependencies": "jspm inspect"
+  },
+  "author": "",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "html-dist": "^0.1.0",
+    "jspm": "^0.15.7"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "app"
+    },
+    "dependencies": {
+      "react": "npm:react@^0.14.0-beta1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
+  }
+}
