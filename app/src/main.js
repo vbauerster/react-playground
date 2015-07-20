@@ -9,7 +9,7 @@ class App extends React.Component {
       *       name: 'World'
       *   }
       *
-      * but, in fact it does't work at the moment
+      * but, in fact it doesn't work at the moment
       * see: http://babeljs.io/blog/2015/06/07/react-on-es6-plus/
       */
 
